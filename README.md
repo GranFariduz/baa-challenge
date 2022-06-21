@@ -15,11 +15,12 @@ The to-do application is intentionally broken, and there are few issues that you
 4. Fix the app to mark a task as completed.
 5. Fix the app to delete a task.
 6. Fix the app to count the completed tasks.
+7. Add a filter button to render list of all checked or unchecked tasks.
 
 
 ## Bonus Points
 
-- Searching/filtering the data in the list
+- Add a feature to search the tasks
 - List pagination if greater than 10 items or lazy-load
 - Write tests cases where possible
 - Additional views
@@ -40,4 +41,4 @@ npm start
 Create a public git repository, push your solution and email the link to <jigar@bookanartist.co>
 
 ## Questions?
-Connect via email to <jigar@bookanartist.co>
+Connect via email to <jigar@bookanartist.co> for any doubts or questions regarding this challenge.

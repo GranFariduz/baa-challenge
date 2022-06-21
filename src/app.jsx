@@ -36,6 +36,31 @@ const todosTemplate = [
     label: 'Fix the app to count the completed tasks',
     checked: false,
   },
+  {
+    id: 6,
+    label: 'Add a filter button to render list of all checked or unchecked tasks',
+    checked: false,
+  },
+  {
+    id: 7,
+    label: 'Bonus: Add a feature to search the tasks',
+    checked: false,
+  },
+  {
+    id: 8,
+    label: 'Bonus: List pagination if greater than 10 items or lazy-load',
+    checked: false,
+  },
+  {
+    id: 9,
+    label: 'Bonus: Write tests cases where possible',
+    checked: false,
+  },
+  {
+    id: 10,
+    label: 'Bonus: Additional views',
+    checked: false,
+  },
 ];
 
 export const App = () => {

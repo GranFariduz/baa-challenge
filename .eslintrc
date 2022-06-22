@@ -46,6 +46,11 @@
     "eol-last": "warn",
     "import/prefer-default-export": "off",
     "react/prop-types": "off",
-    "no-unused-vars": "warn"
+    "no-unused-vars": "warn",
+    "linebreak-style": "off",
+    "object-curly-newline": "off",
+    "arrow-body-style": "off",
+    "operator-linebreak": "off",
+    "implicit-arrow-linebreak": "off"
   }
 }

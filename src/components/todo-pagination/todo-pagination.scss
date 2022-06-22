@@ -1,0 +1,41 @@
+.todos {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(1, 1, 1, 0.1);
+
+  &-pagination {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__back,
+    &__next,
+    &__page {
+      padding: 10px;
+      border: 2px solid #1e90ff;
+      margin: 3px;
+      border-radius: 8px;
+      background-color: white;
+      color: #1e90ff;
+      cursor: pointer;
+    }
+
+    &__back:disabled {
+      border: 2px solid #94b3d1;
+      color: #94b3d1;
+      cursor: not-allowed;
+    }
+
+    &__next:disabled {
+      border: 2px solid #94b3d1;
+      color: #94b3d1;
+      cursor: not-allowed;
+    }
+
+    &__page--active {
+      background-color: #1e90ff;
+      color: white;
+    }
+  }
+}

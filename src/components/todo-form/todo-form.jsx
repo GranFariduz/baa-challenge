@@ -1,13 +1,44 @@
-import * as React from 'react';
-import { TodosContext } from '../../todo-context';
+import React, { useState } from 'react';
+
+// global state
+import { useTodos } from '../../providers/todo-context';
+
+// utils
+import { saveTodos } from '../../utils/storage';
+
+// styles
 import './todo-form.scss';
 
 export const TodoForm = () => {
-  const { todos, setTodos } = React.useContext(TodosContext);
-  const [task, setTask] = React.useState('');
+  // global state
+  const { todos, setTodos } = useTodos();
+
+  // local state
+  const [task, setTask] = useState('');
 
   const handleAddTodo = () => {
-    // Fix the app to display list of all tasks
+    const todoId = todos.length > 0 ? todos[todos.length - 1].id + 1 : 1;
+    const newTask = task.trim(); // trimming any spaces
+
+    if (newTask.length < 2) {
+      return;
+    }
+
+    const newTodo = {
+      id: todoId,
+      label: newTask,
+      checked: false,
+    };
+
+    // adding new todo to the array, clearing task field
+    setTodos((currentTodos) => {
+      const newTodos = [...currentTodos, newTodo];
+
+      // saving todos to localStorage
+      saveTodos(newTodos);
+      return newTodos;
+    });
+    setTask('');
   };
 
   const handleKeyUp = (e) => {
@@ -15,6 +46,8 @@ export const TodoForm = () => {
       handleAddTodo();
     }
   };
+
+  const isAddTaskDisabled = task.length < 2;
 
   return (
     <div className="todo-form">
@@ -24,7 +57,11 @@ export const TodoForm = () => {
         onChange={(e) => setTask(e.target.value)}
         onKeyUp={handleKeyUp}
       />
-      <button type="button" onClick={handleAddTodo}>
+      <button
+        disabled={isAddTaskDisabled}
+        type="button"
+        onClick={handleAddTodo}
+      >
         Add task
       </button>
     </div>

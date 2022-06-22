@@ -9,21 +9,23 @@ We hope you find this exercise challenging but enjoyable.
 
 The to-do application is intentionally broken, and there are few issues that you need to fix:
 
-1. Fix the app to display list of all tasks.
-2. Fix the layout such that the checkboxes should be listed in a column.
-3. Fix the app to add a new task.
-4. Fix the app to mark a task as completed.
-5. Fix the app to delete a task.
-6. Fix the app to count the completed tasks.
-7. Add a filter button to render list of all checked or unchecked tasks.
+1. Fix the app to display list of all tasks. ✅
+2. Fix the layout such that the checkboxes should be listed in a column. ✅
+3. Fix the app to add a new task. ✅
+4. Fix the app to mark a task as completed. ✅
+5. Fix the app to delete a task. ✅
+6. Fix the app to count the completed tasks. ✅
+7. Add a filter button to render list of all checked or unchecked tasks. ✅
 
 
 ## Bonus Points
 
-- Add a feature to search the tasks
-- List pagination if greater than 10 items or lazy-load
+- Add a feature to search the tasks ✅
+- List pagination if greater than 10 items or lazy-load ✅ (Made the limit to 5 for ease of testing)
 - Write tests cases where possible
-- Additional views
+- Additional views ✅
+- Added some beautification and UI enhancements 😉
+- Added data persistence using localStorage 😉
 
 ## Get started
 

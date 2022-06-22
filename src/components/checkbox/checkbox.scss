@@ -2,9 +2,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 400px;
-  margin: 0 auto 5px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.1);
+  margin: 0 auto 10px;
+  padding: 20px 15px;
+  border-radius: 8px;
   cursor: pointer;
+  box-sizing: border-box;
 
   &-content {
     border-radius: 4px;
@@ -14,7 +19,7 @@
     padding: 5px 10px 5px 5px;
 
     input {
-      margin-right: 5px;
+      margin-right: 10px;
     }
 
     &:hover {
@@ -23,15 +28,18 @@
   }
 
   &-delete {
-    background: rgb(200, 200, 200);
+    background: #1e90ff;
     border: none;
+    color: white;
+    border-radius: 8px;
     cursor: pointer;
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     flex-shrink: 0;
+    transition-duration: 0.3s;
 
     &:hover {
-      background: rgb(172, 172, 172);
+      background: crimson;
     }
   }
 
